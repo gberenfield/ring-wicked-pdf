@@ -5,7 +5,7 @@ file
 
 ## Usage
 
-Add [org.clojars.gberenfield/ring-wicked-pdf" 0.1.0-SNAPSHOT"] to your leingingen dependencies.
+Add [org.clojars.gberenfield/ring-wicked-pdf" 1.0.0"] to your leingingen dependencies.
 
 ## License
 
