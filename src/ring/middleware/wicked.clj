@@ -3,10 +3,10 @@
   (:use [clojure.java.shell :only [sh]]))
 
 
-(defn- pdf-request?
-  [req]
-  (if-let [#^String type (:content-type req)]
-    (not (empty? (re-find #"^application/.*pdf" type)))))
+;(defn- pdf-request?
+;  [req]
+;  (if-let [#^String type (:content-type req)]
+;    (not (empty? (re-find #"^application/.*pdf" type)))))
 
 
 (defn as-pdf [contents]
