@@ -1,4 +1,4 @@
-(ns ring.middleware.wicked
+(ns ring.wicked.pdf
   (:require [clojure.java.io :as io])
   (:use [clojure.java.shell :only [sh]]))
 

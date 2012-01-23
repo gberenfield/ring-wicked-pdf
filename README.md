@@ -7,7 +7,7 @@ file
 
 Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.1.0-SNAPSHOT"]` to your leingingen dependencies.
 
-Require it via `(:require [ring-middleware-wicked :as wicked])`
+Require it via `(:require [ring-wicked-pdf :as wicked])`
 
 To render a page as a pdf, simply call `(wicked/as-pdf [contents])` with
 the full html contents to render with wkhtmltopdf.
