@@ -13,7 +13,7 @@ the full html contents to render with wkhtmltopdf.
 
 ###Compojure Example
 The following route renders `/pdf` directly as a pdf.
-```
+```clojure
 (GET "/pdf" [] (wicked/as-pdf "<h1>Hello World</h1>"))
 ```
 
