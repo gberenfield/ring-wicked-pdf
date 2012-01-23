@@ -1,6 +1,6 @@
 # ring-wicked-pdf
 
-Middleware for sending a webpage to wkhtmltopdf for rendering as a PDF
+Simple (m|f)iddleware for sending a webpage to wkhtmltopdf for rendering as a PDF
 file
 
 ## Usage
