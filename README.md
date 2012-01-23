@@ -20,7 +20,7 @@ The following route renders `/pdf` directly as a pdf.
 
 ###Noir Example
 
-The following renders the `/expenses/plainhtml` page directly to the
+The following renders the `/pdf` page directly to the
 browser as a pdf file.
 
 ```clojure
