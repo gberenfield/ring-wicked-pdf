@@ -5,7 +5,7 @@ file
 
 ## Usage
 
-Add [org.clojars.gberenfield/ring-wicked-pdf" 0.1.0-SNAPSHOT"] to your leingingen dependencies.
+Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.1.0-SNAPSHOT"]` to your leingingen dependencies.
 Then `(:require [ring-wicked-pdf :as wicked])`
 
 To render a page as a pdf, simply call `(wicked/as-pdf [contents])` with
