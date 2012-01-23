@@ -24,11 +24,11 @@ The following renders the `/expenses/plainhtml` page directly to the
 browser as a pdf file.
 
 ```clojure
-(defpage "/expenses/plainhtml" []
+(defpage "/" []
   "<h1>Hello World</h1>")
 
-(defpage "/expenses/pdf" []
-  (resp/content-type "application/pdf" (wicked/as-pdf (render "/expenses-plainhtml"))))
+(defpage "/pdf" []
+  (resp/content-type "application/pdf" (wicked/as-pdf (render "/"))))
 ```
 
 ## License
