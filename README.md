@@ -42,6 +42,7 @@ browser as a pdf file.
 
 * Handle local-random filenames and delete after use.
 * locate wkhtmltopdf binary rather than hard-coding to /usr/local/bin
+
 ## License
 
 Copyright (C) 2012 Greg Berenfield
