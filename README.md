@@ -12,6 +12,12 @@ Require it via `(:require [ring-wicked-pdf :as wicked])`
 To render a page as a pdf, simply call `(wicked/as-pdf [contents])` with
 the full html contents to render with wkhtmltopdf.
 
+NB: Resources (css/images) default to "resources/public/" path in
+the main directory of your web app.
+
+You can optionally pass in another resources directory.
+`(wicked/as-pdf [contents your-resource-subdir])`
+
 ###Compojure Example
 The following route renders `/pdf` directly as a pdf.
 
@@ -34,8 +40,8 @@ browser as a pdf file.
 
 ###Todo
 
-Handle local-random filenames and delete after use.
-
+* Handle local-random filenames and delete after use.
+* locate wkhtmltopdf binary rather than hard-coding to /usr/local/bin
 ## License
 
 Copyright (C) 2012 Greg Berenfield
