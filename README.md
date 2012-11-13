@@ -5,7 +5,7 @@ file
 
 ## Usage
 
-Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.1.0-SNAPSHOT"]` to your leingingen dependencies.
+Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.2.0"]` to your leingingen dependencies.
 
 Require it via `(:require [ring-wicked-pdf :as wicked])`
 
@@ -31,6 +31,10 @@ browser as a pdf file.
 (defpage "/pdf" []
   (resp/content-type "application/pdf" (wicked/as-pdf (render "/"))))
 ```
+
+###Todo
+
+Handle local-random filenames and delete after use.
 
 ## License
 
