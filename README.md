@@ -9,14 +9,17 @@ Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.2.0"]` to your leingingen depen
 
 Require it via `(:require [ring-wicked-pdf :as wicked])`
 
+Make sure you have a "tmp" subdirectory in your resource directory tree.
+
 To render a page as a pdf, simply call `(wicked/as-pdf [contents])` with
 the full html contents to render with wkhtmltopdf.
 
 NB: Resources (css/images) default to "resources/public/" path in
 the main directory of your web app.
 
-You can optionally pass in another resources directory.
-`(wicked/as-pdf [contents your-resource-subdir])`
+You can optionally pass in another resources directory as well as page
+orientation.
+`(wicked/as-pdf contents :orientation "landscape" :resource-dir "my-resource-subdir")`
 
 ###Compojure Example
 The following route renders `/pdf` directly as a pdf.
@@ -40,9 +43,7 @@ browser as a pdf file.
 
 ###Todo
 
-* Handle local-random filenames and delete after use.
 * locate wkhtmltopdf binary rather than hard-coding to /usr/local/bin
-* portrait or landscape
 
 ## License
 
