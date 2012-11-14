@@ -1,5 +1,6 @@
 (ns ring.wicked.pdf
-  (:require [clojure.java.io :as io])
+  (:require [clojure.java.io :as io]
+            clojure.string)
   (:use [clojure.java.shell :only [sh]]))
 
 (defn my-timestamp
@@ -17,7 +18,7 @@
   (let [fixed-content (clojure.string/replace contents #"\"/" (str "\"" (System/getProperty "user.dir") resource-dir))
         temp-file (io/file (str "resources/public/tmp/pdf-" (my-timestamp) ".pdf"))
         temp-filename (str (. temp-file getAbsoluteFile))
-        _  (sh "/usr/local/bin/wkhtmltopdf" "-O" orientation "-" temp-filename :in fixed-content)
+        _  (sh "wkhtmltopdf" "-O" orientation "-" temp-filename :in fixed-content)
         pdf (io/input-stream temp-file)]
     (io/delete-file temp-filename)
     pdf))

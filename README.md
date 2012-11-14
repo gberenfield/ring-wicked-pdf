@@ -5,11 +5,12 @@ file
 
 ## Usage
 
-Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.2.1"]` to your leingingen dependencies.
+Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.3.0"]` to your leingingen dependencies.
 
 Require it via `(:require [ring-wicked-pdf :as wicked])`
 
 Make sure you have a "tmp" subdirectory in your resource directory tree.
+Also "wkhtmltopdf" needs to be in your webapp's binary executable path.
 
 To render a page as a pdf, simply call `(wicked/as-pdf contents)` with
 the full html contents to render with wkhtmltopdf.
