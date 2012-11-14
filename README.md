@@ -35,7 +35,7 @@ browser as a pdf file.
 ```
 
 ###Options
-You can optionally pass in another resources directory as well as page
+You can optionally pass in another resource directory as well as page
 orientation.
 `(wicked/as-pdf contents :orientation "landscape" :resource-dir "my-resource-subdir")`
 
