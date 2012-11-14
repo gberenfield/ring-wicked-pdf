@@ -41,7 +41,7 @@ browser as a pdf file.
   (resp/content-type "application/pdf" (wicked/as-pdf (render "/"))))
 ```
 
-## License
+### License
 
 Copyright (C) 2012 Greg Berenfield
 
