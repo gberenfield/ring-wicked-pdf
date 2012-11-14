@@ -11,14 +11,15 @@ Require it via `(:require [ring-wicked-pdf :as wicked])`
 
 Make sure you have a "tmp" subdirectory in your resource directory tree.
 
-To render a page as a pdf, simply call `(wicked/as-pdf [contents])` with
+To render a page as a pdf, simply call `(wicked/as-pdf contents)` with
 the full html contents to render with wkhtmltopdf.
 
 ###Compojure Example
 The following route renders `/pdf` directly as a pdf.
 
 ```clojure
-(GET "/pdf" [] (wicked/as-pdf "<h1>Hello World</h1>"))
+(GET "/pdf" [] (wicked/as-pdf "<html><body><h1>Hello
+World</h1></body></html>"))
 ```
 
 ###Noir Example
@@ -28,7 +29,7 @@ browser as a pdf file.
 
 ```clojure
 (defpage "/" []
-  "<h1>Hello World</h1>")
+  "<html><body><h1>Hello World</h1></html></body>")
 
 (defpage "/pdf" []
   (resp/content-type "application/pdf" (wicked/as-pdf (render "/"))))
