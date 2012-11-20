@@ -15,9 +15,9 @@
   of the running clojure web app. Options are page orientation
   io-type (:stream or :file) and a 'resource-dir' subdirectory
   can be passed as well."
-  [contents & {:keys [orientation resource-dir io-type] :or {orientation :portrait resource-dir "/resources/public/" io-type :stream}}]
-  (let [fixed-content (clojure.string/replace contents #"\"/" (str "\"" (System/getProperty "user.dir") resource-dir))
-        temp-file (io/file (str "resources/public/tmp/pdf-" (my-timestamp) ".pdf"))
+  [contents & {:keys [orientation resource-dir io-type] :or {orientation :portrait resource-dir "resources/public/" io-type :stream}}]
+  (let [fixed-content (clojure.string/replace contents #"\"/" (str "\"" (System/getProperty "user.dir") (str "/" resource-dir)))
+        temp-file (io/file (str resource-dir "/tmp/pdf-" (my-timestamp) ".pdf"))
         temp-filename (str (. temp-file getAbsoluteFile))
         _  (sh "wkhtmltopdf" "-O" (name orientation) "-" temp-filename :in fixed-content)
         pdf (io/input-stream temp-file)]
