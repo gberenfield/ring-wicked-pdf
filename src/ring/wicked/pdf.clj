@@ -17,9 +17,9 @@
   can be passed as well."
   [contents & {:keys [orientation resource-dir io-type] :or {orientation :portrait resource-dir "/resources/public/" io-type :stream}}]
   (let [fixed-content (clojure.string/replace contents #"\"/" (str "\"" (System/getProperty "user.dir") resource-dir))
-        temp-file (io/file (name "resources/public/tmp/pdf-" (my-timestamp) ".pdf"))
+        temp-file (io/file (str "resources/public/tmp/pdf-" (my-timestamp) ".pdf"))
         temp-filename (str (. temp-file getAbsoluteFile))
-        _  (sh "wkhtmltopdf" "-O" (str orientation) "-" temp-filename :in fixed-content)
+        _  (sh "wkhtmltopdf" "-O" (name orientation) "-" temp-filename :in fixed-content)
         pdf (io/input-stream temp-file)]
     (if (= io-type :stream)
       (do
