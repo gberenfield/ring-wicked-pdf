@@ -5,7 +5,7 @@ file
 
 ## Usage
 
-Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.3.2"]` to your leingingen dependencies.
+Add `[org.clojars.gberenfield/ring-wicked-pdf" 0.3.3"]` to your leingingen dependencies.
 
 Require it via `(:require [ring-wicked-pdf :as wicked])`
 
