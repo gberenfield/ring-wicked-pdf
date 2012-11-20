@@ -36,10 +36,10 @@ browser as a pdf file.
 ##Options
 You can optionally pass in:
 <table>
-  <tr><th>Item</th><th>option</th><th>default</th></tr>
-  <tr><td>resource directory</td><td>resource-dir</td><td>"resources/public/"</td></tr>
-  <tr><td>page orientation</td><td>:orientation</td><td>:portrait</td></tr>
-  <tr><td>io-type (file or stream)|</td><td>:io-type</td><td>:stream</td></tr>
+  <tr><th>Item</th><th>option</th><th>default</th><th>possibilities</td></tr>
+  <tr><td>resource directory</td><td>resource-dir</td><td>"resources/public/"</td><td>\<sub-directory string\></tr>
+  <tr><td>page orientation</td><td>:orientation</td><td>:portrait</td><td>:portrait :landscape</td></tr>
+  <tr><td>io-type (file or stream)|</td><td>:io-type</td><td>:stream</td><td> :stream :file</td></tr>
 </table>
 
 `(wicked/as-pdf contents :orientation :landscape :resource-dir "my-resource-subdir" :io-type :file)`
