@@ -37,9 +37,9 @@ browser as a pdf file.
 You can optionally pass in:
 <table>
   <tr><th>Item</th><th>option</th><th>default</th></tr>
-  <tr><td>resource directory</td><td>`resource-dir`</td><td>`"resources/public/"`</td></tr>
-  <tr><td>page orientation</td><td>`:orientation`</td><td>`:portrait`</td></tr>
-  <tr><td>io-type (file or stream)|</td><td>`:io-type`</td><td>`:stream`</td></tr>
+  <tr><td>resource directory</td><td>resource-dir</td><td>"resources/public/"</td></tr>
+  <tr><td>page orientation</td><td>:orientation</td><td>:portrait</td></tr>
+  <tr><td>io-type (file or stream)|</td><td>:io-type</td><td>:stream</td></tr>
 </table>
 
 `(wicked/as-pdf contents :orientation :landscape :resource-dir "my-resource-subdir" :io-type :file)`
