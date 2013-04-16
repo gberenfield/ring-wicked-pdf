@@ -1,4 +1,4 @@
-(defproject ring-wicked-pdf "0.3.3"
+(defproject ring-wicked-pdf "0.4.0"
   :url "https://github.com/gberenfield/ring-wicked-pdf"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
