@@ -7,7 +7,7 @@ file
 
 Add `[ring-wicked-pdf "0.4.1"]` to your leingingen dependencies.
 
-Require it via `(:require [ring-wicked-pdf :as wicked])`
+Require it via `(:require [ring.wicked.pdf :as wicked])`
 
 "wkhtmltopdf" needs to be in your webapp's binary executable path.
 
