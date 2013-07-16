@@ -5,7 +5,7 @@ file
 
 ## Usage
 
-Add `[ring-wicked-pdf "0.4.1"]` to your leingingen dependencies.
+Add `[ring-wicked-pdf "0.4.2"]` to your leingingen dependencies.
 
 Require it via `(:require [ring.wicked.pdf :as wicked])`
 
@@ -40,7 +40,8 @@ You can optionally pass in:
   <tr><td>resource directory</td><td>:resource-dir</td><td>"resources/public/"</td><td>&lt;sub-directory string&gt;</tr>
   <tr><td>tmp directory</td><td>:tmp-dir</td><td>"/tmp"</td><td>&lt;directory string&gt;</tr>
   <tr><td>page orientation</td><td>:orientation</td><td>:portrait</td><td>:portrait :landscape</td></tr>
-  <tr><td>io-type (file or stream)|</td><td>:io-type</td><td>:stream</td><td> :stream :file</td></tr>
+  <tr><td>io-type (file or stream)</td><td>:io-type</td><td>:stream</td><td> :stream :file</td></tr>
+  <tr><td>papersize</td><td>:papersize</td><td>"Letter"</td><td>"Letter", "A4", etc.</td></tr>
 </table>
 
 `(wicked/as-pdf contents :orientation :landscape :resource-dir "my-resource-subdir" :tmp-dir "my-temp-dir" :io-type :file)`

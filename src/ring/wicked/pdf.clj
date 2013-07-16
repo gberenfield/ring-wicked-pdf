@@ -13,13 +13,13 @@
   "Takes an entire html page as contents and defaults to
   'resources/public/ for any css/js/img items in the path
   of the running clojure web app. Options are page orientation
-  io-type (:stream or :file), a 'tmp-dir' and a 'resource-dir'
+  io-type (:stream or :file), 'papersize' , 'tmp-dir' and a 'resource-dir'
   subdirectory can be passed as well."
-  [contents & {:keys [orientation resource-dir tmp-dir io-type] :or {orientation :portrait resource-dir "resources/public/" tmp-dir "/tmp" io-type :stream}}]
+  [contents & {:keys [orientation resource-dir tmp-dir io-type papersize] :or {orientation :portrait resource-dir "resources/public/" tmp-dir "/tmp" io-type :stream papersize "Letter"}}]
   (let [fixed-content (clojure.string/replace contents #"\"/" (str "\"" (System/getProperty "user.dir") (str "/" resource-dir)))
         temp-file (io/file (str tmp-dir "/pdf-" (my-timestamp) ".pdf"))
         temp-filename (str (. temp-file getAbsoluteFile))
-        _  (sh "wkhtmltopdf" "-O" (name orientation) "-" temp-filename :in fixed-content)
+        _  (sh "wkhtmltopdf" "-O" (name orientation) "-s" (str papersize) "-" temp-filename :in fixed-content)
         pdf (io/input-stream temp-file)]
     (if (= io-type :stream)
       (do
